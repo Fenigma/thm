@@ -9,7 +9,7 @@ sudo nmap -sC -sV -A -O -oN nmap/initial.log $ip -T4
 ```
 gobuster -u http://$ip -w /opt/wordlist/medium.txt
 ```
-- There, we find /archieves. We find a wordlist named note_about_passwords.txt
+- There, we find /archives. We find a wordlist named note_about_passwords.txt
 - We can see that it lists passwords that maybe can be used to login to other service, like port 21 / ftp.
 - Save the wordlists, for example to `~/wordlist.txt`
 - try bruteforcing using hydra:
@@ -27,7 +27,7 @@ enter the password as: ahimsa
 cd files
 get id_rsa
 ```
-- Also, we can find reminder.txt which says that we need to escalate 4 times.
+- Also, we can find reminder.txt which says that we need to escalate 3 times.
 - SSH as low user:
 ```
 ssh -i id_rsa low@$ip
